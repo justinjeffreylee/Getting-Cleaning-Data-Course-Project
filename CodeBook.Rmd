@@ -1,0 +1,47 @@
+---
+title: "CodeBook"
+author: "JustinLee"
+date: "February 20, 2015"
+output: html_document
+---
+
+List all files in original data set, then explain each step in the process of cleaning and sorting data.
+
+Files in UCS HAR Dataset
+activity_labels.txt - Text file with id of activity performed during study.
+features_info.txt - describes the variable labels for X_test/train.txt results.
+features.txt - variable labels for X_test/train.txt results.
+README.txt - Original descriptive file of HCI dataset
+subject_test/train.txt - identifies which subject each obervational result comes from.
+X_test/train.txt - pre-processed results of sensor data.
+Y_test/train/txt - id file of activity performed during study.
+Inertial Signals - raw data from the original study, ignore for this analysis.
+
+Coursera-Related files in Dataset
+README.Rmd - Description of Coursera Assignment and interpretation of sensor data.
+run_analysis - Script to process the UCI HAR Dataset.
+
+Assignment Deliverables
+====================================================================
+You should create one R script called run_analysis.R that does the following. 
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+
+Variables:
+The variables extracted from the data set are the mean and standard deviation of sensor results along the X,Y,and Z axis.  These results have been pre-processed by the original study authors.  Raw results are in the Inertial Signals files, but are not used in the Coursera-related script and assignment.
+
+Script Description:
+1. Import the data and combine variables into one dataframe for both the Test and Train data sets.
+2. Cbind the dataframes together into one.  
+3. Update Activity Labels to human-readable text.
+4. Extract columns with the Mean or Standard Deviation of sensor data, this reduces the 561 variable columns to 79.
+5. Clean variable names to remove "-", convert text to camelCase.
+6. Reshape the dataframe to display the mean of each sensor reading (mean or std by X,Y or Z axis) by activity by subject who performed this activity.  
+7. The Final_Results file is the exported results of the the mean of each sensor reading (mean or std by X,Y or Z axis) by activity by subject who performed this activity.  
+
+
+

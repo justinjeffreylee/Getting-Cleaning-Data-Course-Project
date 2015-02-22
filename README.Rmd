@@ -1,0 +1,31 @@
+---
+title: "README.txt"
+author: "JustinLee"
+date: "February 20, 2015"
+output: html_document
+---
+====================================================================
+
+The files included in this repo clean, sort and produce a tidy data 
+set of a collection of sensor data from a wearables experiment in 
+Spain. The Final_Results dataset is the mean sensor reading for each 
+subject while performing each acvitity.  The original data includes accelerometer and gyroscope sensor data along the X, Y, and Z axis 
+for 30 human subjects.  The subjects were recorded doing 6 activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, 
+LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
+
+The files I created take the original dataset https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and
+combines the test and training data sets, attaches clear, human-readable
+labels, and summarizes the mean of the mean and the mean of the standard
+deviation for each set of axial readings.  
+
+The repo includes the following files:
+====================================================================
+- The original dataset "UCI HAR Dataset".
+- "CodeBook.md" which describes the data cleaning and processing.
+- "run_analysis.R" the combined script to clean and process the data.
+
+Before running the script:
+====================================================================
+1. Download and unzip the original dataset:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+2. Set the Working Directory to "UCI HAR Dataset".
